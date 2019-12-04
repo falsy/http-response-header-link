@@ -5,7 +5,7 @@ module.exports = () => {
   
   router.get('/link-test', ctx => {
     ctx.set('Link', `<https://falsy.me>; rel="home"`);
-    // ctx.set('Access-Control-Expose-Headers', 'Link');
+    ctx.set('Access-Control-Expose-Headers', 'Link');
 
     ctx.body = {
       results: 'ok'
